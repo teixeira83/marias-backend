@@ -3,7 +3,8 @@ exports.up = function(knex) {
     table.string('id').primary();
     table.string('titulo').notNullable();
     table.string('descricao').notNullable();
-    table.string('imagem');
+    table.string('imgKey');
+    table.string('imgUrl');
   });
 };
 
