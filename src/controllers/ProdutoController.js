@@ -4,7 +4,7 @@ const crypto = require('crypto');
 module.exports = {
 
     async show(request, response) {
-        const maximoDeProdutosPorPagina = 8;
+        const maximoDeProdutosPorPagina = 10;
         const { page = 1 } = request.query;
 
         const [count] = await connection('produtos').count();
@@ -41,7 +41,7 @@ module.exports = {
                 titulo,
                 descricao,
                 imgKey: '',
-                imgUrl: ''
+                imgUrl: process.env.AWS_DEFAULT_IMAGE
             })
         }
 
