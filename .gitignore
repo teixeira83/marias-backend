@@ -1,4 +1,4 @@
 node_modules
 knexfile.js
 .env
-*.sqlite
+db.sqlite
